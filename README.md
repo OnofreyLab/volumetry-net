@@ -18,6 +18,29 @@ Moritz Gross<sup>1, 2</sup>, M.S.; Steffen Huber<sup>1</sup>, M.D.; Sandeep Aror
 **Clinical relevance statement:** Liver volumetry, anatomic localization, and extraction of quantitative imaging biomarkers require accurate segmentation, but manual segmentation is time-consuming. A deep convolutional neural network demonstrates fast and accurate segmentation performance on T1-weighted portal-venous MRI.
 
 
+
+## Using Volumetry-Net
+
+### Prerequisites
+
+Clone this repository to your local machine.
+Install the necessary dependencies by creating a conda environment from the `environment.yml` file located in the root directory of this repository.
+
+### Using the Liver Segmentation Model on Portal-Venous Phase MRI
+
+To perform model inference on your data, follow these steps:
+1. Activate the conda environment from the `environment.yml` file
+2. Open the `Automated Segmentation Inference.ipynb` notebook from the notebooks directory. The notebook contains detailed instructions for running the model inference.
+3. Update the `MODEL_ROOT_PATH` variable within the notebook to point to the directory where you have saved the trained model on your local machine.
+4. Update the the `OUTPUT_PATH` variable within the notebook to point to the directory where you want to save out the generated liver segmentations.
+
+Notice: If want to change the naming convention of the output segmentation masks you can modify the `output_file_name` parameter in the `inference` function.
+
+
+
+
+
+
 ## Author information
 
 **Affiliations**
@@ -47,4 +70,4 @@ Moritz Gross<sup>1, 2</sup>, M.S.; Steffen Huber<sup>1</sup>, M.D.; Sandeep Aror
 
 ## Cite this article
 
-Coming Soon!
+Gross, M., Huber, S., Arora, S. et al. Automated MRI liver segmentation for anatomical segmentation, liver volumetry, and the extraction of radiomics. Eur Radiol (2024). https://doi.org/10.1007/s00330-023-10495-5
